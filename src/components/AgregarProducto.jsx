@@ -6,10 +6,20 @@ import { useSelector } from 'react-redux'
 import { actionLicor } from '../actions/ActionCarrito.js'
 import { borrarProducto } from '../actions/ActionCarrito'
 import uuid from 'react-uuid'
+import styled from 'styled-components'
 
+const StyledTitulo = styled.h1`
+    text-align: center;
+    font-size: 34px;
+    margin-top: 100px;
 
+`
 
-
+const StyledFormContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+`
 
 function FormularioPromociones() {
     const [show, setShow] = useState(false);
@@ -39,20 +49,21 @@ function FormularioPromociones() {
             producto,
         })
     }
-    const pedidos = useSelector((state) => state.productos);
-
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
-        </Button>
-
+            <div>
+                <StyledTitulo>Registrate para Recibir Nuestras Promociones</StyledTitulo>
+            </div>
+            <StyledFormContainer>
+                <Button variant="primary" onClick={handleShow}>
+                    ¡Conseguir mi Promoción!
+                 </Button>
+            </StyledFormContainer>
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Rellena tus datos</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-
                     <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Ingrese su Nombre</Form.Label>
@@ -72,18 +83,7 @@ function FormularioPromociones() {
                             Enviar
                             </Button>
                     </Form>
-
-
-
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-            </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-            </Button>
-                </Modal.Footer>
             </Modal>
         </>
     );
@@ -94,10 +94,10 @@ const AgregarProducto = () => {
     const pedidos = useSelector((state) => state.productos);
     return (
         <React.Fragment>
+            <div>
+                <FormularioPromociones />
+            </div>
             <Container>
-                <Row>
-                    <FormularioPromociones />
-                </Row>
                 <Row>
                     <Col xs={12}>
                         <div className="card mt-5">
@@ -108,7 +108,7 @@ const AgregarProducto = () => {
                                         <thead>
                                             <tr>
                                                 <th scope="col">Nombre del Cliente</th>
-                                                <th scope="col">Producto Seleccionado</th>
+                                                <th scope="col">Direccion</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -127,15 +127,12 @@ const AgregarProducto = () => {
                                                     </tr>
                                                 ))
                                             }
-
                                         </tbody>
                                     </table>
                                 </div>
                             </div >
                         </div >
                     </Col>
-
-
                 </Row>
             </Container>
         </React.Fragment>
