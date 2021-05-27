@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/licores-board-redux/static/js/main.989a7819.chunk.js",
-    "main.js.map": "/licores-board-redux/static/js/main.989a7819.chunk.js.map",
+    "main.js": "/licores-board-redux/static/js/main.086c1a02.chunk.js",
+    "main.js.map": "/licores-board-redux/static/js/main.086c1a02.chunk.js.map",
     "runtime-main.js": "/licores-board-redux/static/js/runtime-main.5a0337c5.js",
     "runtime-main.js.map": "/licores-board-redux/static/js/runtime-main.5a0337c5.js.map",
     "static/css/2.15a7a700.chunk.css": "/licores-board-redux/static/css/2.15a7a700.chunk.css",
-    "static/js/2.165b59eb.chunk.js": "/licores-board-redux/static/js/2.165b59eb.chunk.js",
-    "static/js/2.165b59eb.chunk.js.map": "/licores-board-redux/static/js/2.165b59eb.chunk.js.map",
+    "static/js/2.c4691a3e.chunk.js": "/licores-board-redux/static/js/2.c4691a3e.chunk.js",
+    "static/js/2.c4691a3e.chunk.js.map": "/licores-board-redux/static/js/2.c4691a3e.chunk.js.map",
     "index.html": "/licores-board-redux/index.html",
     "static/css/2.15a7a700.chunk.css.map": "/licores-board-redux/static/css/2.15a7a700.chunk.css.map",
-    "static/js/2.165b59eb.chunk.js.LICENSE.txt": "/licores-board-redux/static/js/2.165b59eb.chunk.js.LICENSE.txt"
+    "static/js/2.c4691a3e.chunk.js.LICENSE.txt": "/licores-board-redux/static/js/2.c4691a3e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5a0337c5.js",
     "static/css/2.15a7a700.chunk.css",
-    "static/js/2.165b59eb.chunk.js",
-    "static/js/main.989a7819.chunk.js"
+    "static/js/2.c4691a3e.chunk.js",
+    "static/js/main.086c1a02.chunk.js"
   ]
 }
