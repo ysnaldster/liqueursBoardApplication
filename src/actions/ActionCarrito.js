@@ -9,3 +9,10 @@ export const actionLicor = (producto) => {
         payload: producto
     }
 }
+
+export const borrarProducto = (id) => {
+    return{
+        type: types.borrar,
+        payload: id 
+    }
+}

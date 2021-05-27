@@ -1,7 +1,7 @@
 import Licores from './components/Licores.jsx'
 import ListarLicores from './components/ListarLicores.jsx'
 import SliderLicores from './components/SliderLicores.jsx'
-import Carrito from './components/Carrito.jsx'
+import AgregarProducto from './components/AgregarProducto.jsx'
 import Store from './store/Store'
 import { Provider } from 'react-redux'
 import { ChakraProvider } from "@chakra-ui/react"
@@ -15,10 +15,8 @@ function App() {
           <Licores />
           <SliderLicores />
           <ListarLicores />
-          <Carrito />
+          <AgregarProducto/>
         </div>
-
-
       </ChakraProvider>
     </Provider>
   );
