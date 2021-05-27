@@ -2,7 +2,7 @@
   "name": "board-licores",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://YsnaldoXVen.github.io/licores-board-project",
+  "homepage": "http://YsnaldoXVen.github.io/licores-board-redux",
   "dependencies": {
     "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11",
@@ -23,6 +23,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
