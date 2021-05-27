@@ -1,39 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useFetch } from '../hooks/useFetch.jsx'
 import { Card, Button, Col, Row, Container } from 'react-bootstrap'
+
+
 
 const ListarLicores = () => {
 
     const { loading, data } = useFetch(`https://api-licores.herokuapp.com/licores`);
     const productos = data;
-    // console.log(productos);
-
-    const datosCarrito = [];
-    const guardarProducto = (e) => {
-        e.preventDefault();
-        console.log("boton funcionando")
-        console.log(e);
-    }
-
-    const getElementProducts = document.querySelectorAll('.text-center')
-    getElementProducts.forEach((eventos => {
-        eventos.addEventListener("click", obtencionPrincipal)
-    }))
-
-    const obtencionPrincipal = (e) => {
-        const botones = e.target;
-        const cards = botones.closest('.item');
-        const cardTitle = cards.querySelector('.card-title').textContent;
-        const cardDescription = cards.querySelector('.card-description').textContent;
-        const cardPrecio = cards.querySelector('.card-precio').textContent;
-        const cardImg = cards.querySelector('.card-img').src;
-        elementosCarrito(cardTitle, cardDescription, cardPrecio, cardImg)
-    }
-
-    const elementosCarrito = (cardTitle, cardDescription, cardPrecio, cardImg) => {
-
-    }
-
     return (
         <React.Fragment>
             <Container>
@@ -54,15 +28,13 @@ const ListarLicores = () => {
                                                     {licor.precio} $
                                                 </Card.Text>
                                             </Card.Body>
-                                            <Card.Footer className="text-muted"><Button variant="primary" style={{ width: '300px' }} onClick = {() => {
-                                                    datosCarrito.push()
-                                            }} id = {licor.id}>Comprar</Button></Card.Footer>
+                                            <Card.Footer className="text-muted"><Button variant="primary" style={{ width: '300px' }} >Comprar</Button></Card.Footer>
                                         </Card>
                                     </div>
                                 </Col>
                             )
                             ) :
-                            <h1>No hay datos</h1>
+                         <h1>Bienvenido a nuestro Registro de Promociones en Licores</h1>
                     }
                 </Row>
             </Container>
