@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Licores from './components/Licores.jsx'
+import ListarLicores from './components/ListarLicores.jsx'
+import SliderLicores from './components/SliderLicores.jsx'
+import Carrito from './components/Carrito.jsx'
+import Store from './store/Store'
+import { Provider } from 'react-redux'
+import { ChakraProvider } from "@chakra-ui/react"
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={Store}>
+      <ChakraProvider>
+        <div className="App">
+          <Licores />
+          <SliderLicores />
+          <ListarLicores />
+          <Carrito />
+        </div>
+
+
+      </ChakraProvider>
+    </Provider>
   );
 }
 
